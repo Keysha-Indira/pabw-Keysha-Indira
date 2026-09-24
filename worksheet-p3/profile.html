@@ -112,7 +112,26 @@
  
     <section id="form-p">
       <h2>Tambah Player</h2>
-      <!-- form Anda nanti di sini (Lembar E) -->
+        <form action="/simpan" method="post">
+          <p>
+            <label for="nickname-p">Input Nickname</label>
+            <input type="text" id="nickname-p" name="nickname-p" required>
+          </p>
+          <p>
+            <label for="name-p">Input Nama</label>
+            <input type="text" id="name-p" name="name-p" required>
+          </p>
+          <p>
+            <label for="tl-p">Input Tanggal Lahir</label>
+            <input type="date" id="tl-p" name="tl-p" required>
+          </p>
+          <p>
+            <label for="role-p">Input Role</label>
+            <input type="text" id="role-p" name="role-p" required>
+          </p>
+          <button type="submit">Simpan</button>
+        </form>
+
     </section>
   </main>
  
