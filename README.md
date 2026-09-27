@@ -20,13 +20,13 @@ Topik halaman saya: List Player Tim Astralis Counter-Strike
 ## Pertemuan 4 - Design token halaman profil
 
 - Berkas gaya yang akan dibuat: token.css, base.css, layout.css, komponen.css, tema.css
-- Warna utama :  Ungu muda, karena menurut saya warnanya bagus :D
+- Warna utama :  Ungu, karena menurut saya warnanya bagus :D
 
 ## Token yang saya tetapkan
 
 | Token | Nilai | Untuk apa |
-| --color-primary | #BEC3FF | tombol, tautan, penanda |
-| --color-fg | #DDDDDD | warna teks utama |
-| --color-bg | #1c1c1c | latar halaman |
+| --color-primary | #4F46E5 | tombol, tautan, penanda |
+| --color-fg | #0F172A| warna teks utama |
+| --color-bg | #F1F5F9 | latar halaman |
 | --radius-md | 0.5rem | sudut tombol dan kartu |
 | --space-4 | 1rem | jarak standar antar elemen |
