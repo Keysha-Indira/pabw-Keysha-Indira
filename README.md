@@ -30,3 +30,10 @@ Topik halaman saya: List Player Tim Astralis Counter-Strike
 | --color-bg | #F1F5F9 | latar halaman |
 | --radius-md | 0.5rem | sudut tombol dan kartu |
 | --space-4 | 1rem | jarak standar antar elemen |
+
+## Catatan Penggunaan AI
+
+-Digunakan untuk memperjelas instruksi yang ada pada worksheet
+-Memvisualisasikan warna yang akan dimasukkan pada file .css
+-Memperbaiki transisi mode terang ke mode gelap
+-Memperbaiki pengimplementasian primary color pada hasil akhir

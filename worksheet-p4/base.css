@@ -14,6 +14,15 @@ body, h1, h2, h3, p, table, th, td, caption, figcaption, label {
   color: var(--color-fg);
 }
 
+h1, h2, h3 {
+  color: var(--color-primary);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
 body {
   font-family: system-ui, "Segoe UI", Roboto, sans-serif;
   font-size: var(--text-md);

@@ -34,7 +34,7 @@
   --color-border:  var(--slate-200);
   --color-primary: var(--indigo-600);
   --color-danger:  var(--red-600);
-  --color-focus:   var(--indigo-500);
+  --color-focus: var(--color-primary);
 
   --card-pad:      var(--space-4);
   --section-gap:   var(--space-6);
