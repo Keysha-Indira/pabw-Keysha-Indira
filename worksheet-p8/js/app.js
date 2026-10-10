@@ -8,6 +8,13 @@ const profil = {
 const kalimat = `Nama saya ${profil.nama}, dan saya belajar ${profil.keahlian.length} hal. Saya telah menyelesaikan sebanyak ${profil.proyek} proyek.`;
 console.log(kalimat);
 
+let pilihanAktif = "semua";
+pilihanAktif = "proyek terbaru";
+console.log(`Pilihan aktif: ${pilihanAktif}`);
+
+const kota = profil.alamat?.kota ?? "Alamat belum tersedia";
+console.log(kota);
+
 function buatPerkenalan({ nama, peran }) {
   return `${nama} — ${peran}`;
 }
@@ -24,18 +31,48 @@ const daftarProyek = [
   { judul: "SIMBAC - Sistem Booking Costume", tahun: 2026, selesai: true }
 ];
 
+console.log("Daftar keahlian:");
 console.table(profil.keahlian);
+
+console.log("Daftar seluruh proyek:");
 console.table(daftarProyek);
 
-const selesai = daftarProyek.filter((proyek) => proyek.selesai);
-console.table(selesai);
+const proyekTerbaru = daftarProyek.filter(
+  (proyek) => proyek.tahun >= 2025
+);
 
-const katalog = daftarProyek.find((proyek) => proyek.judul === "Musikal Aladdin");
-console.log(katalog);
+console.log("Proyek tahun 2025 ke atas:");
+console.table(proyekTerbaru);
 
-const daftarJudulProyek = daftarProyek.map((proyek) => proyek.judul);
-console.log(daftarJudulProyek);
+const proyekDitemukan = daftarProyek.find(
+  (proyek) => proyek.judul === "Musikal Aladdin"
+);
 
-const proyekDisusun = [...daftarProyek].sort((a,b) => b.tahun - a.tahun);
+console.log("Hasil find:");
+console.log(proyekDitemukan);
+
+const daftarJudulProyek = daftarProyek.map(
+  (proyek) => proyek.judul
+);
+
+console.log("Hasil map:");
+console.table(daftarJudulProyek);
+
+const salinanProfil = { ...profil };
+console.log(salinanProfil);
+
+console.log("Profil asli:");
+console.log(profil);
+
+console.log("Salinan profil:");
+console.log(salinanProfil);
+
+const proyekDisusun = [...daftarProyek].sort(
+  (a, b) => b.tahun - a.tahun
+);
+
+console.log("Proyek setelah diurutkan:");
 console.table(proyekDisusun);
 
+console.log("Data proyek asli:");
+console.table(daftarProyek);

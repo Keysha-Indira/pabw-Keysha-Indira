@@ -37,3 +37,13 @@ Topik halaman saya: List Player Tim Astralis Counter-Strike
 -Memvisualisasikan warna yang akan dimasukkan pada file .css
 -Memperbaiki transisi mode terang ke mode gelap
 -Memperbaiki pengimplementasian primary color pada hasil akhir
+
+## Pertemuan 8
+
+Topik : JavaScript
+
+## Catatan Penggunaan AI
+
+-Digunalan untuk memahami instruksi worksheet
+-Menjelaskan konsep JavaScript (fungsi murni. array of object, map, filter, find, spread operator)
+-memberikan contoh struktur kode
