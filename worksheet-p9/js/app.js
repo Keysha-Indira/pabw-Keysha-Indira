@@ -76,3 +76,66 @@ console.table(proyekDisusun);
 
 console.log("Data proyek asli:");
 console.table(daftarProyek);
+
+export const daftarPlayer = [
+  {
+    nickname: "jabbi",
+    nama: "Jakob Nygaard",
+    tanggalLahir: "23-07-2003",
+    role: "Closer"
+  },
+  {
+    nickname: "HooXi",
+    nama: "Rasmus Nielsen",
+    tanggalLahir: "21-05-1995",
+    role: "In-Game Leader"
+  },
+  {
+    nickname: "Staehr",
+    nama: "Victor Hansen",
+    tanggalLahir: "19-07-2004",
+    role: "Opener"
+  },
+  {
+    nickname: "ryu",
+    nama: "Gytis Glušauskas",
+    tanggalLahir: "25-07-2004",
+    role: "Anchor"
+  },
+  {
+    nickname: "phzy",
+    nama: "Love Smidebrant",
+    tanggalLahir: "24-09-2002",
+    role: "AWPer"
+  },
+  {
+    nickname: "Magisk",
+    nama: "Emil Reif",
+    tanggalLahir: "05-03-1998",
+    role: "Closer"
+  },
+  {
+    nickname: "dev1ce",
+    nama: "Nicolai Reedtz",
+    tanggalLahir: "08-09-1995",
+    role: "AWPer"
+  },
+  {
+    nickname: "dupreeh",
+    nama: "Peter Rasmussen",
+    tanggalLahir: "26-03-1993",
+    role: "Opener"
+  },
+  {
+    nickname: "Xy9px",
+    nama: "Andreas Højsleth",
+    tanggalLahir: "11-09-1995",
+    role: "Anchor"
+  },
+  {
+    nickname: "gla1ve",
+    nama: "Lukas Rossander",
+    tanggalLahir: "07-06-1995",
+    role: "In-Game Leader"
+  }
+];
