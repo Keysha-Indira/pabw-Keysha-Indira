@@ -104,19 +104,59 @@
         <form id="player-form" action="/simpan" method="post">
           <p class="form-kolom">
             <label for="nickname-p">Input Nickname</label>
-            <input type="text" id="nickname-p" name="nickname-p" required>
+
+            <input
+              type="text"
+              id="nickname-p"
+              name="nickname-p"
+              required
+            >
+
+            <small id="nickname-error" class="form-error" hidden>
+              Nickname wajib diisi.
+            </small>
           </p>
           <p class="form-kolom">
             <label for="name-p">Input Nama</label>
-            <input type="text" id="name-p" name="name-p" required>
+
+            <input
+              type="text"
+              id="name-p"
+              name="name-p"
+              required
+            >
+
+            <small id="name-error" class="form-error" hidden>
+              Nama wajib diisi.
+            </small>
           </p>
           <p class="form-kolom">
             <label for="tl-p">Input Tanggal Lahir</label>
-            <input type="date" id="tl-p" name="tl-p" required>
+
+            <input
+              type="date"
+              id="tl-p"
+              name="tl-p"
+              required
+            >
+
+            <small id="birth-error" class="form-error" hidden>
+              Tanggal lahir wajib diisi.
+            </small>
           </p>
           <p class="form-kolom">
             <label for="role-p">Input Role</label>
-            <input type="text" id="role-p" name="role-p" required>
+
+            <input
+              type="text"
+              id="role-p"
+              name="role-p"
+              required
+            >
+
+            <small id="role-error" class="form-error" hidden>
+              Role wajib diisi.
+            </small>
           </p>
           <button type="submit">Simpan</button>
         </form>

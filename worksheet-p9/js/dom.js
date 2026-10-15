@@ -74,3 +74,99 @@ filterRow.addEventListener("click", (event) => {
 });
 
 renderPlayers(daftarPlayer);
+
+const nicknameError =
+  document.querySelector("#nickname-error");
+
+const nameError =
+  document.querySelector("#name-error");
+
+const birthError =
+  document.querySelector("#birth-error");
+
+const roleError =
+  document.querySelector("#role-error");
+
+const submitButton =
+  playerForm.querySelector('button[type="submit"]');
+
+
+function validateRequiredField(field, errorElement) {
+  const valid = field.value.trim() !== "";
+
+  errorElement.hidden = valid;
+
+  field.setAttribute(
+    "aria-invalid",
+    valid ? "false" : "true"
+  );
+
+  return valid;
+}
+
+
+function validateForm() {
+  const nicknameValid =
+    validateRequiredField(
+      nicknameInput,
+      nicknameError
+    );
+
+  const nameValid =
+    validateRequiredField(
+      nameInput,
+      nameError
+    );
+
+  const birthValid =
+    validateRequiredField(
+      birthDateInput,
+      birthError
+    );
+
+  const roleValid =
+    validateRequiredField(
+      roleInput,
+      roleError
+    );
+
+  const valid =
+    nicknameValid &&
+    nameValid &&
+    birthValid &&
+    roleValid;
+
+  submitButton.disabled = !valid;
+
+  return valid;
+}
+
+
+[
+  nicknameInput,
+  nameInput,
+  birthDateInput,
+  roleInput
+].forEach((field) => {
+  field.addEventListener("input", validateForm);
+});
+
+
+playerForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const valid = validateForm();
+
+  if (!valid) {
+    const firstInvalid =
+      playerForm.querySelector(
+        '[aria-invalid="true"]'
+      );
+
+    firstInvalid?.focus();
+
+    return;
+  }
+
+  console.log("Form valid.");
+});
