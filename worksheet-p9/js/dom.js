@@ -34,9 +34,43 @@ function buildPlayerRow(player) {
 function renderPlayers(list) {
   playerList.textContent = "";
 
+  if (list.length === 0) {
+    emptyMessage.hidden = false;
+    return;
+  }
+
+  emptyMessage.hidden = true;
+
   list.forEach((player) => {
     playerList.append(buildPlayerRow(player));
   });
 }
+
+function markActiveButton(activeButton) {
+  document
+    .querySelectorAll("#player-filter button")
+    .forEach((button) => {
+      button.classList.toggle(
+        "active",
+        button === activeButton
+      );
+    });
+}
+
+filterRow.addEventListener("click", (event) => {
+  const button = event.target.closest("button");
+
+  if (!button) return;
+
+  const role = button.dataset.role;
+
+  const hasilFilter = daftarPlayer.filter((player) => {
+    return role === "semua" || player.role === role;
+  });
+
+  markActiveButton(button);
+
+  renderPlayers(hasilFilter);
+});
 
 renderPlayers(daftarPlayer);

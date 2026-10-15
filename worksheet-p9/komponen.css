@@ -83,3 +83,8 @@ button, input[type="submit"] {
   align-content: start;
   min-height: 14rem;
 }
+
+#player-filter button.active {
+  font-weight: bold;
+  border-width: 2px;
+}
