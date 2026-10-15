@@ -47,3 +47,11 @@ Topik : JavaScript
 -Digunalan untuk memahami instruksi worksheet
 -Menjelaskan konsep JavaScript (fungsi murni. array of object, map, filter, find, spread operator)
 -memberikan contoh struktur kode
+
+## Pertemuan 9
+
+Topik: DOM and Interactivity
+
+## Catatan Penggunaan AI
+-Digunalan untuk memahami instruksi worksheet
+-memberikan contoh struktur kode DOM, event delegation, dan validasi form.
