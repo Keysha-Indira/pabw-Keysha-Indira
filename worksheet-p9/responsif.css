@@ -1,0 +1,54 @@
+.isi {
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "utama"
+    "sisi";
+  gap: var(--space-4);
+}
+
+.galeri {
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.navbar {
+  flex-wrap: wrap;
+}
+
+.utama,
+.sisi,
+.kartu {
+  min-width: 0;
+}
+
+.kartu,
+figcaption {
+  overflow-wrap: anywhere;
+}
+
+.table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+@media (min-width: 48rem) {
+
+  .galeri {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (min-width: 60rem) {
+
+  .isi {
+    grid-template-columns: 16rem 1fr;
+    grid-template-areas: "sisi utama";
+    gap: var(--space-6);
+  }
+
+  .galeri {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
