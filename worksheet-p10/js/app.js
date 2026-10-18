@@ -1,5 +1,6 @@
 import { fetchPosts } from "./api.js";
 const apiStatus = document.querySelector("#api-status");
+const postList = document.querySelector("#post-list");
 
 const profil = {
   nama: "Keysha Indira Satya Putri",
@@ -143,17 +144,56 @@ export const daftarPlayer = [
   }
 ];
 
+function renderPosts(list) {
+  postList.textContent = "";
+
+  if (list.length === 0) {
+    apiStatus.textContent =
+      "Tidak ada data tersedia.";
+    return;
+  }
+
+  list.forEach((post) => {
+    const article =
+      document.createElement("article");
+
+    const title =
+      document.createElement("h3");
+
+    const body =
+      document.createElement("p");
+
+    title.textContent = post.title;
+    body.textContent = post.body;
+
+    article.append(title, body);
+
+    postList.append(article);
+  });
+}
+
+
 async function loadPosts() {
+  apiStatus.textContent = "Memuat data...";
+  postList.textContent = "";
+
   try {
     const data = await fetchPosts();
 
-    apiStatus.textContent = "Data berhasil dimuat.";
+    renderPosts(data);
 
-    console.log(data);
+    if (data.length > 0) {
+      apiStatus.textContent =
+        "Data berhasil dimuat.";
+    }
   } catch (error) {
+    postList.textContent = "";
+
     apiStatus.textContent =
-      "Gagal memuat data: " + error.message;
+      "Gagal memuat data: " +
+      error.message;
   }
 }
+
 
 loadPosts();
