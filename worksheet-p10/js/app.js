@@ -1,4 +1,5 @@
-import { load } from "./api.js";
+import { fetchPosts } from "./api.js";
+const apiStatus = document.querySelector("#api-status");
 
 const profil = {
   nama: "Keysha Indira Satya Putri",
@@ -142,10 +143,17 @@ export const daftarPlayer = [
   }
 ];
 
-load()
-  .then((data) => {
+async function loadPosts() {
+  try {
+    const data = await fetchPosts();
+
+    apiStatus.textContent = "Data berhasil dimuat.";
+
     console.log(data);
-  })
-  .catch((error) => {
-    console.error(error.message);
-  });
+  } catch (error) {
+    apiStatus.textContent =
+      "Gagal memuat data: " + error.message;
+  }
+}
+
+loadPosts();
