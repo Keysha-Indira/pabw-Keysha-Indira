@@ -53,5 +53,15 @@ Topik : JavaScript
 Topik: DOM and Interactivity
 
 ## Catatan Penggunaan AI
--Digunalan untuk memahami instruksi worksheet
+-Digunakan untuk memahami instruksi worksheet
 -memberikan contoh struktur kode DOM, event delegation, dan validasi form.
+
+## Pertemuan 10
+
+Topic: Js Async & JSON
+
+## Catatan Penggunaan AI
+-Digunakan untuk memahami instruksi worksheet
+-memberikan contoh kode
+-menjelaskan konsep fetch, async/await, response.ok, JSON, error handling,
+dan cara menguji state loading, success, failure, dan empty
