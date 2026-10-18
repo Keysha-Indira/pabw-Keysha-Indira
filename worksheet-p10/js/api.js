@@ -10,10 +10,12 @@ export async function fetchPosts() {
 
     const data = await response.json();
 
+    console.log("Data dari API:");
+    console.log(data);
+
     return data;
   } catch (error) {
     console.error("failed to load:", error.message);
-
     throw error;
   }
 }
