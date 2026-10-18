@@ -178,7 +178,7 @@ async function loadPosts() {
   postList.textContent = "";
 
   try {
-    const data = await fetchPosts();
+    const data = [];
 
     renderPosts(data);
 
